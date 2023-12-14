@@ -10,8 +10,10 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 const userRoute = require(`./routes/userRoute`);
+const timeRoute = require(`./routes/timeRoute`);
 
 userRoute(app);
+timeRoute(app);
 
 app.listen(port, () => {
   console.log(`Exemple app listening on port ${port}`)
